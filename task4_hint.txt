@@ -1,0 +1,5 @@
+Matryoshka Doll.jpg裡有flag.txt，解壓完原本的jpg檔後，會跑出flag.txt。
+(透過binwalk找到)
+但嘗試要開flag.txt，卻不能開啟。
+於是又透過xxd flag.txt發現這是png (magic number : 89 50 4e 47)
+再利用Python Imaging Library開啟png檔，得到flag
