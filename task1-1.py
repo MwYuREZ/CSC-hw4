@@ -28,7 +28,7 @@ def exploit():
     # Try to receive the flag
     while True:
         try:
-            flag_response = conn.recvline(timeout=1)
+            flag_response = conn.recvline()
             if not flag_response:
                 break
             decoded_response = flag_response.decode().strip()
